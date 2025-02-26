@@ -16,34 +16,77 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  all: unset;
+}
+
 @font-face {
-  font-family: "FormaDJRBanner-Regular";
-  src: url("../fonts/FormaDJRBanner-Regular.ttf");
-  font-weight: normal;
+  font-family: "Test Sohne";
+  src: url("../fonts/TestSohne-Buch.otf") format("opentype");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "HelveticaNowDisplay-Regular";
-  src: url("../fonts/HelveticaNowDisplay-Regular.ttf");
-  font-weight: normal;
+  font-family: "FormaDJR Text";
+  src: url("../fonts/FormaDJRText-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FormaDJR Banner";
+  src: url("../fonts/FormaDJRBanner-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FormaDJR Text Bold";
+  src: url("../fonts/FormaDJRText-Bold.woff") format("truetype");
+  font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "FKScreamerLegacyTrial";
-  src: url("../fonts/FKScreamerLegacyTrial.ttf");
-  font-weight: normal;
+  src: url("../fonts/FKScreamerLegacyTrial-Upright.otf") format("opentype");
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: "FormaDJRText-Regular";
-  src: url("../fonts/FormaDJRText-Regular.ttf");
-  font-weight: normal;
+  font-family: "Helvetica Now Display";
+  src: url("../fonts/Helvetica-Now-Display-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Now Display";
+  src: url("../fonts/Helvetica-Now-Display-Medium.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
 }
 .container {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+}
+
+.nav__list {
+  display: flex;
+  gap: 20px;
+}
+.nav__list a {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 9px;
+  font-family: "FormaDJR Text";
+  font-size: 14px;
+  line-height: 17px;
+  cursor: pointer;
+}
+.nav__list-white {
+  color: rgb(255, 255, 255);
+}
+.nav__list-black {
+  color: rgb(0, 0, 0);
 }
 
 .introduction {
@@ -60,7 +103,7 @@ li {
   border-right: solid 1px rgba(255, 255, 255, 0.1);
 }
 .introduction__title {
-  font-family: "FormaDJRBanner-Regular";
+  font-family: "FormaDJR Banner";
   font-weight: 700;
   font-size: 56px;
   line-height: 67px;
@@ -68,25 +111,12 @@ li {
   margin-bottom: 60px;
 }
 .introduction__info {
-  font-family: "HelveticaNowDisplay-Regular";
+  font-family: "Helvetica Now Display";
   margin-bottom: 489px;
   width: 375px;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-}
-.introduction__list {
-  display: flex;
-  gap: 20px;
-}
-.introduction__list li {
-  margin-bottom: 9px;
-  font-family: "FormaDJRText-Regular";
-  font-size: 14px;
-  line-height: 17px;
-}
-.introduction__list-active {
-  color: rgb(255, 255, 255);
 }
 .introduction__main {
   position: relative;
@@ -109,24 +139,25 @@ li {
   height: 40px;
 }
 .introduction__specialist {
-  font-family: "FormaDJRBanner-Regular";
+  font-family: "FormaDJR Text";
   font-weight: 400;
   font-size: 20px;
   line-height: 22px;
   margin-bottom: 5px;
 }
 .introduction__identify {
-  font-family: "HelveticaNowDisplay-Regular";
+  font-family: "Helvetica Now Display";
 }
 .introduction__candidate {
   display: flex;
   align-items: center;
   margin-left: auto;
-  font-family: "HelveticaNowDisplay-Regular";
+  font-family: "Helvetica Now Display";
   font-weight: 500;
   font-size: 18px;
   line-height: 23px;
   color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 .introduction__text {
   font-family: "FKScreamerLegacyTrial";
@@ -148,7 +179,7 @@ li {
   -webkit-backdrop-filter: blur(14px);
           backdrop-filter: blur(14px);
   color: rgb(255, 255, 255);
-  font-family: "HelveticaNowDisplay-Regular";
+  font-family: "Helvetica Now Display";
   font-weight: 500;
   font-size: 18px;
   line-height: 23px;
@@ -172,9 +203,6 @@ li {
 }
 .introduction__window-2:hover {
   animation-play-state: paused;
-}
-.introduction__window span {
-  color: rgba(255, 255, 255, 0.4);
 }
 @keyframes randomFloat {
   0% {
@@ -244,6 +272,13 @@ li {
   width: 16px;
   height: 16px;
 }
+.introduction__icon-text {
+  font-family: "Helvetica Now Display";
+}
+.introduction__icon-text span {
+  color: rgba(255, 255, 255, 0.4);
+  font-family: "Helvetica Now Display";
+}
 .introduction__icon-1 {
   margin-bottom: 221px;
 }
@@ -256,7 +291,6 @@ li {
   bottom: -78px;
   transform: rotate(5deg);
   transform-origin: right bottom;
-  background-image: url(/img/background.png);
   z-index: 1;
   width: 950px;
   height: 1150px;
@@ -273,7 +307,7 @@ li {
   padding: 60px 0 0 60px;
 }
 .right-now__title {
-  font-family: "FormaDJRBanner-Regular";
+  font-family: "FormaDJR Banner";
   font-weight: 700;
   font-size: 56px;
   line-height: 67px;
@@ -281,25 +315,12 @@ li {
   margin-bottom: 60px;
 }
 .right-now__info {
-  font-family: "HelveticaNowDisplay-Regular";
+  font-family: "Helvetica Now Display";
   margin-bottom: 135px;
   width: 375px;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-}
-.right-now__list {
-  display: flex;
-  gap: 20px;
-}
-.right-now__list li {
-  margin-bottom: 9px;
-  font-family: "FormaDJRText-Regular";
-  font-size: 14px;
-  line-height: 17px;
-}
-.right-now__list-active {
-  color: rgb(0, 0, 0);
 }
 .right-now__main {
   width: 958px;
@@ -320,7 +341,7 @@ li {
   align-items: center;
 }
 .right-now__text {
-  font-family: "HelveticaNowDisplay-Regular";
+  font-family: "Helvetica Now Display";
   font-weight: 500;
   font-size: 16px;
   color: rgb(79, 79, 79);
@@ -352,7 +373,7 @@ li {
   left: 0;
 }
 .right-now__num {
-  font-family: "HelveticaNowDisplay-Regular";
+  font-family: "Helvetica Now Display";
   font-weight: 500;
   font-size: 16px;
   color: rgb(79, 79, 79);
@@ -367,14 +388,14 @@ li {
   color: rgb(255, 255, 255);
 }
 .right-now__block-title {
-  font-family: "FormaDJRBanner-Regular";
+  font-family: "FormaDJR Text";
   font-weight: 700;
   font-size: 32px;
   line-height: 35px;
   margin-bottom: 20px;
 }
 .right-now__block-text {
-  font-family: "HelveticaNowDisplay-Regular";
+  font-family: "Helvetica Now Display";
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
@@ -393,7 +414,7 @@ li {
   border-right: solid 1px rgba(255, 255, 255, 0.1);
 }
 .collaborative__title {
-  font-family: "FormaDJRBanner-Regular";
+  font-family: "FormaDJR Banner";
   font-weight: 700;
   font-size: 56px;
   line-height: 67px;
@@ -401,28 +422,35 @@ li {
   margin-bottom: 60px;
 }
 .collaborative__info {
-  font-family: "HelveticaNowDisplay-Regular";
+  font-family: "Helvetica Now Display";
   margin-bottom: 432px;
   width: 375px;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
 }
-.collaborative__list {
-  display: flex;
-  gap: 20px;
-}
-.collaborative__list li {
-  margin-bottom: 9px;
-  font-family: "FormaDJRText-Regular";
-  font-size: 14px;
-  line-height: 17px;
-}
-.collaborative__list-active {
-  color: rgb(255, 255, 255);
-}
 .collaborative__main {
   position: relative;
+}
+.collaborative__main div:nth-child(1) {
+  position: absolute;
+  top: 254px;
+  left: 48px;
+}
+.collaborative__main div:nth-child(2) {
+  position: absolute;
+  top: 384px;
+  left: 48px;
+}
+.collaborative__main div:nth-child(3) {
+  position: absolute;
+  top: 514px;
+  left: 48px;
+}
+.collaborative__main div:nth-child(4) {
+  position: absolute;
+  top: 644px;
+  left: 48px;
 }
 .collaborative__window {
   width: 862px;
@@ -434,7 +462,7 @@ li {
   -webkit-backdrop-filter: blur(14px);
           backdrop-filter: blur(14px);
   color: rgb(255, 255, 255);
-  font-family: "HelveticaNowDisplay-Regular";
+  font-family: "Helvetica Now Display";
   font-weight: 500;
   font-size: 18px;
   line-height: 23px;
@@ -445,7 +473,7 @@ li {
   transform: scale(1.01);
 }
 .collaborative__window-title {
-  font-family: "FormaDJRBanner-Regular";
+  font-family: "FormaDJR Text";
   font-weight: 700;
   font-size: 32px;
   line-height: 35px;
@@ -453,37 +481,16 @@ li {
   margin-bottom: 20px;
 }
 .collaborative__window-text {
-  font-family: "HelveticaNowDisplay-Regular";
+  font-family: "Helvetica Now Display";
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   color: rgb(255, 255, 255);
 }
-.collaborative__window-1 {
-  position: absolute;
-  top: 254px;
-  left: 48px;
-}
-.collaborative__window-2 {
-  position: absolute;
-  top: 384px;
-  left: 48px;
-}
-.collaborative__window-3 {
-  position: absolute;
-  top: 514px;
-  left: 48px;
-}
-.collaborative__window-4 {
-  position: absolute;
-  top: 644px;
-  left: 48px;
-}
 
 .journey {
   display: flex;
   color: rgba(0, 0, 0, 0.4);
-  height: 2752px;
 }
 .journey__side {
   width: 481px;
@@ -491,7 +498,7 @@ li {
   padding: 60px 0 0 60px;
 }
 .journey__title {
-  font-family: "FormaDJRBanner-Regular";
+  font-family: "FormaDJR Banner";
   font-weight: 700;
   font-size: 56px;
   line-height: 67px;
@@ -499,32 +506,19 @@ li {
   margin-bottom: 60px;
 }
 .journey__info {
-  font-family: "HelveticaNowDisplay-Regular";
+  font-family: "Helvetica Now Display";
   margin-bottom: 473px;
   width: 375px;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
 }
-.journey__list {
-  display: flex;
-  gap: 20px;
-}
-.journey__list li {
-  margin-bottom: 9px;
-  font-family: "FormaDJRText-Regular";
-  font-size: 14px;
-  line-height: 17px;
-}
-.journey__list-active {
-  color: rgb(0, 0, 0);
-}
 .journey__main {
   padding: 187px 74px 0 22px;
 }
 .journey__describe {
   width: 356px;
-  font-family: "FormaDJRBanner-Regular";
+  font-family: "FormaDJR Text";
   font-weight: 800;
   font-size: 50px;
   line-height: 55px;
@@ -532,7 +526,7 @@ li {
   margin-bottom: 16px;
 }
 .journey__text {
-  font-family: "HelveticaNowDisplay-Regular";
+  font-family: "Helvetica Now Display";
   width: 494px;
   font-size: 16px;
   font-weight: 400;
@@ -553,14 +547,14 @@ li {
   font-size: 32px;
   line-height: 48px;
   color: rgb(0, 0, 0);
-  font-family: "FormaDJRText-Regular";
+  font-family: "FormaDJR Text";
 }
 .journey__list-text {
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   color: rgb(79, 79, 79);
-  font-family: "FormaDJRText-Regular";
+  font-family: "FormaDJR Text";
 }
 .journey__visual {
   margin-bottom: 600px;
@@ -573,13 +567,68 @@ li {
 .journey__profile {
   position: absolute;
   top: 389px;
-  left: 180px;
-  width: 501px;
+  right: 180px;
+  left: 255px;
+  width: 430px;
   height: 655px;
+}
+.journey__profile-secondary {
+  position: absolute;
+  width: 236px;
+  height: 235px;
+  top: 420px;
+  right: 221px;
+}
+.journey__profile-secondary img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.journey__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 89px;
+  left: 54px;
+  width: 321px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+.journey__block-name {
+  display: flex;
+  justify-content: center;
+  gap: 11px;
+  margin-bottom: 20px;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "FormaDJR Text";
+}
+.journey__block-img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 34px;
+}
+.journey__block-title {
+  font-family: "FormaDJR Text";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 20px;
+}
+.journey__block-text {
+  font-family: "Helvetica Now Display";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
 }
 .journey__entity {
   width: 862px;
   height: 500px;
+  margin-bottom: 202px;
 }
 
 .conclusion {
@@ -596,7 +645,7 @@ li {
   border-right: solid 1px rgba(255, 255, 255, 0.1);
 }
 .conclusion__title {
-  font-family: "FormaDJRBanner-Regular";
+  font-family: "FormaDJR Banner";
   font-weight: 700;
   font-size: 56px;
   line-height: 67px;
@@ -604,25 +653,12 @@ li {
   margin-bottom: 60px;
 }
 .conclusion__info {
-  font-family: "HelveticaNowDisplay-Regular";
+  font-family: "Helvetica Now Display";
   margin-bottom: 525px;
   width: 375px;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-}
-.conclusion__list {
-  display: flex;
-  gap: 20px;
-}
-.conclusion__list li {
-  margin-bottom: 9px;
-  font-family: "FormaDJRText-Regular";
-  font-size: 14px;
-  line-height: 17px;
-}
-.conclusion__list-active {
-  color: rgb(255, 255, 255);
 }
 .conclusion__main {
   margin: 0 auto;
@@ -645,7 +681,6 @@ li {
   bottom: -78px;
   transform: rotate(5deg);
   transform-origin: right bottom;
-  background-image: url(/img/background.png);
   z-index: 1;
   width: 950px;
   height: 1150px;
@@ -657,18 +692,16 @@ li {
 }
 .conclusion__links-item {
   width: 296px;
-  height: 252px;
   border: solid 1px rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 117px 0;
   color: rgb(255, 255, 255);
-  font-family: "HelveticaNowDisplay-Regular";
+  font-family: "Helvetica Now Display";
   text-align: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 18px;
   cursor: pointer;
-  text-decoration: none;
   transition: transform 0.3s ease;
   z-index: 2;
 }

@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const blockTitle = document.querySelector(".right-now__block-title");
   const blockText = document.querySelector(".right-now__block-text");
 
+  // Block right-now navigation (swiper)
   const descriptions = {
     team: {
       title: "Team",

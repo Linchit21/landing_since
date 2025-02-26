@@ -6,24 +6,24 @@
 }
 
 @mixin fontBannerTitle {
-  font-family: "FormaDJRBanner-Regular";
+  font-family: "FormaDJR Banner";
   font-weight: 700;
   font-size: 56px;
   line-height: 67px;
 }
 
 @mixin fontBanner {
-  font-family: "FormaDJRBanner-Regular";
+  font-family: "FormaDJR Text Bold";
 }
 
 @mixin fontFormaText {
-  font-family: "FormaDJRText-Regular";
+  font-family: "FormaDJR Text";
 }
 
 @mixin fontHelvic {
-  font-family: "HelveticaNowDisplay-Regular";
+  font-family: "Helvetica Now Display";
 }
 
 @mixin fontScreamer {
-  font-family: "FKScreamerLegacyTrial"; //TODO: Не правильный шрифт, должен быть прямой
+  font-family: "FKScreamerLegacyTrial";
 }

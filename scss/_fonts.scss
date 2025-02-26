@@ -1,27 +1,42 @@
 @font-face {
-  font-family: "FormaDJRBanner-Regular";
-  src: url("../fonts/FormaDJRBanner-Regular.ttf");
-  font-weight: normal;
+  font-family: "Test Sohne";
+  src: url("../fonts/TestSohne-Buch.otf") format("opentype");
+  font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
-  font-family: "HelveticaNowDisplay-Regular";
-  src: url("../fonts/HelveticaNowDisplay-Regular.ttf");
-  font-weight: normal;
+  font-family: "FormaDJR Text";
+  src: url("../fonts/FormaDJRText-Regular.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
 }
-
+@font-face {
+  font-family: "FormaDJR Banner";
+  src: url("../fonts/FormaDJRBanner-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FormaDJR Text Bold";
+  src: url("../fonts/FormaDJRText-Bold.woff") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
 @font-face {
   font-family: "FKScreamerLegacyTrial";
-  src: url("../fonts/FKScreamerLegacyTrial.ttf");
-  font-weight: normal;
+  src: url("../fonts/FKScreamerLegacyTrial-Upright.otf") format("opentype");
+  font-weight: 700;
   font-style: normal;
 }
-
 @font-face {
-  font-family: "FormaDJRText-Regular";
-  src: url("../fonts/FormaDJRText-Regular.ttf");
-  font-weight: normal;
+  font-family: "Helvetica Now Display";
+  src: url("../fonts/Helvetica-Now-Display-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Now Display";
+  src: url("../fonts/Helvetica-Now-Display-Medium.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
 }

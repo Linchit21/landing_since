@@ -4,15 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="scss/style.css" />
+    <!-- gsap -->
     <script src="./lib/gsap.min.js"></script>
     <script src="./lib/ScrollTrigger.min.js"></script>
     <script src="./lib/ScrollToPlugin.min.js"></script>
-
+    <!-- gsap -->
     <title>SINCE 2020</title>
   </head>
   <body>
     <main class="container">
-      <section class="introduction">
+      <section id="introduction" class="introduction">
         <div class="introduction__side">
           <div class="introduction__title">We wake Jit</div>
           <div class="introduction__info">
@@ -23,21 +24,21 @@
             trusted outstaffing company, we specialize in providing businesses
             with top-tier talent to achieve their goals efficiently
           </div>
-          <div class="introduction__list">
-            <div>
-              <li class="introduction__list-active">00</li>
-              <li>01</li>
-              <li>02</li>
-              <li>03</li>
-              <li>04</li>
-            </div>
-            <div>
-              <li class="introduction__list-active">Introduction</li>
-              <li>Right now</li>
-              <li>Collaborative process</li>
-              <li>A journey</li>
-              <li>Conclusion</li>
-            </div>
+          <div class="nav__list">
+            <nav>
+              <a href="#introduction" class="nav__list-white">00</a>
+              <a href="#right-now">01</a>
+              <a href="#collaborative">02</a>
+              <a href="#journey">03</a>
+              <a href="#conclusion">04</a>
+            </nav>
+            <nav>
+              <a href="#introduction" class="nav__list-white">Introduction</a>
+              <a href="#right-now">Right now</a>
+              <a href="#collaborative">Collaborative process</a>
+              <a href="#journey">A journey</a>
+              <a href="#conclusion">Conclusion</a>
+            </nav>
           </div>
         </div>
         <div class="introduction__main">
@@ -55,7 +56,7 @@
                 </p>
               </div>
             </div>
-            <div class="introduction__candidate">Find a candidate</div>
+            <a class="introduction__candidate">Find a candidate</a>
           </div>
           <div class="introduction__text">
             Since 2020, we've been helping companies find talent in in software
@@ -65,7 +66,7 @@
             <div class="introduction__icon introduction__icon-1">
               <img src="./img/hot.png" alt="" />
             </div>
-            <p>
+            <p class="introduction__icon-text">
               <span
                 >Jit, as an experienced outstaffing provider, is able to
                 reduce</span
@@ -80,7 +81,7 @@
             <div class="introduction__icon introduction__icon-2">
               <img src="./img/slice.png" alt="" />
             </div>
-            <p>
+            <p class="introduction__icon-text">
               <span
                 >Partner with Jit, an outstaffing company that streamlines the
                 process
@@ -89,10 +90,12 @@
               business while we handle the rest
             </p>
           </div>
-          <div class="introduction__background"></div>
+          <div class="introduction__background">
+            <img src="./img/background.png" alt="" />
+          </div>
         </div>
       </section>
-      <section class="right-now">
+      <section id="right-now" class="right-now">
         <div class="right-now__side">
           <div class="right-now__title">Right now</div>
           <div class="right-now__info">
@@ -104,21 +107,21 @@
             clients build amazing digital products with exceptional people
             across a wide variety of categories.
           </div>
-          <div class="right-now__list">
-            <div>
-              <li>00</li>
-              <li class="right-now__list-active">01</li>
-              <li>02</li>
-              <li>03</li>
-              <li>04</li>
-            </div>
-            <div>
-              <li>Introduction</li>
-              <li class="right-now__list-active">Right now</li>
-              <li>Collaborative process</li>
-              <li>A journey</li>
-              <li>Conclusion</li>
-            </div>
+          <div class="nav__list">
+            <nav>
+              <a href="#introduction">00</a>
+              <a href="#right-now" class="nav__list-black">01</a>
+              <a href="#collaborative">02</a>
+              <a href="#journey">03</a>
+              <a href="#conclusion">04</a>
+            </nav>
+            <nav>
+              <a href="#introduction">Introduction</a>
+              <a href="#right-now" class="nav__list-black">Right now</a>
+              <a href="#collaborative">Collaborative process</a>
+              <a href="#journey">A journey</a>
+              <a href="#conclusion">Conclusion</a>
+            </nav>
           </div>
         </div>
         <div class="right-now__main">
@@ -170,11 +173,10 @@
               based on the principles of fair competition and meritocracy
             </p>
           </div>
-        </div>
       </section>
-      <section class="collaborative">
+      <section id="collaborative" class="collaborative">
         <div class="collaborative__side">
-          <div class="collaborative__title">Collaborative  process</div>
+          <div class="collaborative__title">Collaborative process</div>
           <div class="collaborative__info">
             At Jit, we make collaboration simple and efficient. Our
             well-structured and transparent processes are designed to ensure
@@ -183,25 +185,27 @@
             we’ve refined every step to save you time and eliminate unnecessary
             complexity.
           </div>
-          <div class="collaborative__list">
-            <div>
-              <li>00</li>
-              <li>01</li>
-              <li class="collaborative__list-active">02</li>
-              <li>03</li>
-              <li>04</li>
-            </div>
-            <div>
-              <li>Introduction</li>
-              <li>Right now</li>
-              <li class="collaborative__list-active">Collaborative process</li>
-              <li>A journey</li>
-              <li>Conclusion</li>
-            </div>
+          <div class="nav__list">
+            <nav>
+              <a href="#introduction">00</a>
+              <a href="#right-now">01</a>
+              <a href="#collaborative" class="nav__list-white">02</a>
+              <a href="#journey">03</a>
+              <a href="#conclusion">04</a>
+            </nav>
+            <nav>
+              <a href="#introduction">Introduction</a>
+              <a href="#right-now">Right now</a>
+              <a href="#collaborative" class="nav__list-white"
+                >Collaborative process</a
+              >
+              <a href="#journey">A journey</a>
+              <a href="#conclusion">Conclusion</a>
+            </nav>
           </div>
         </div>
         <div class="collaborative__main">
-          <div class="collaborative__window collaborative__window-1">
+          <div class="collaborative__window">
             <p class="collaborative__window-title">
               Tell us about <br />
               your request
@@ -214,7 +218,7 @@
               unnecessary complexity
             </p>
           </div>
-          <div class="collaborative__window collaborative__window-2">
+          <div class="collaborative__window">
             <p class="collaborative__window-title">
               We match you with the <br />
               right person for your request
@@ -227,7 +231,7 @@
               unnecessary complexity
             </p>
           </div>
-          <div class="collaborative__window collaborative__window-3">
+          <div class="collaborative__window">
             <p class="collaborative__window-title">
               Evaluate them within your team: <br />
               interview, meetings, whatever you like
@@ -240,7 +244,7 @@
               unnecessary complexity
             </p>
           </div>
-          <div class="collaborative__window collaborative__window-4">
+          <div class="collaborative__window">
             <p class="collaborative__window-title">
               Filling out <br />your team
             </p>
@@ -254,7 +258,7 @@
           </div>
         </div>
       </section>
-      <section class="journey">
+      <section id="journey" class="journey">
         <div class="journey__side">
           <div class="journey__title">A journey</div>
           <div class="journey__info">
@@ -265,21 +269,21 @@
             you’ll find case studies highlighting our work, showcasing how our
             talent and expertise have driven success for our clients.
           </div>
-          <div class="journey__list">
-            <div>
-              <li>00</li>
-              <li>01</li>
-              <li>02</li>
-              <li class="journey__list-active">03</li>
-              <li>04</li>
-            </div>
-            <div>
-              <li>Introduction</li>
-              <li>Right now</li>
-              <li>Collaborative process</li>
-              <li class="journey__list-active">A journey</li>
-              <li>Conclusion</li>
-            </div>
+          <div class="nav__list">
+            <nav>
+              <a href="#introduction">00</a>
+              <a href="#right-now">01</a>
+              <a href="#collaborative">02</a>
+              <a href="#journey" class="nav__list-black">03</a>
+              <a href="#conclusion">04</a>
+            </nav>
+            <nav>
+              <a href="#introduction">Introduction</a>
+              <a href="#right-now">Right now</a>
+              <a href="#collaborative">Collaborative process</a>
+              <a href="#journey" class="nav__list-black">A journey</a>
+              <a href="#conclusion">Conclusion</a>
+            </nav>
           </div>
         </div>
         <div class="journey__main">
@@ -312,7 +316,26 @@
               <img src="./img/phone.png" alt="" />
             </div>
             <div class="journey__profile">
-              <img src="./img/profile.png" alt="" />
+              <div> 
+                <div>
+                  <img src="./img/profileMain.png" alt="" />
+                </div>
+                <div class="journey__profile-secondary">
+                  <img src="./img/profileSecondary.png" alt="" />
+                </div>
+                <div class="journey__block">
+                  <div class="journey__block-name">
+                    <p>Pavel Glytov</p>
+                    <p>HRD</p>
+                  </div>
+                  <div class="journey__block-img">
+                    <img src="./img/avatar.png" alt="">
+                  </div>
+                  <p class="journey__block-title">Right now, I see Jit as the strongest player in the outstaff market in the states</p>
+                  <p class="journey__block-text">This is dictated by the insanely nice approach within the team, we actually have a big family. We also treat our partner as well. That's why people come to us more than once and invite us to informal meetings. I am proud of that. 
+                    Just in time!</p>
+                </div>
+              </div>
             </div>
           </div>
           <div>
@@ -338,13 +361,13 @@
                 <p class="journey__list-text">Fullstack engineers</p>
               </div>
             </div>
-            <div class="journey__list-entity">
+            <div class="journey__entity">
               <img src="./img/entity.png" alt="" />
             </div>
           </div>
         </div>
       </section>
-      <section class="conclusion">
+      <section id="conclusion" class="conclusion">
         <div class="conclusion__side">
           <div class="conclusion__title">Conclusion</div>
           <div class="conclusion__info">
@@ -355,21 +378,21 @@
             trusted outstaffing company, we specialize in providing businesses
             with top-tier talent to achieve their goals efficiently
           </div>
-          <div class="conclusion__list">
-            <div>
-              <li>00</li>
-              <li>01</li>
-              <li>02</li>
-              <li>03</li>
-              <li class="conclusion__list-active">04</li>
-            </div>
-            <div>
-              <li>Introduction</li>
-              <li>Right now</li>
-              <li>Collaborative process</li>
-              <li>A journey</li>
-              <li class="conclusion__list-active">Conclusion</li>
-            </div>
+          <div class="nav__list">
+            <nav>
+              <a href="#introduction">00</a>
+              <a href="#right-now">01</a>
+              <a href="#collaborative">02</a>
+              <a href="#journey">03</a>
+              <a href="#conclusion" class="nav__list-white">04</a>
+            </nav>
+            <nav>
+              <a href="#introduction">Introduction</a>
+              <a href="#right-now">Right now</a>
+              <a href="#collaborative">Collaborative process</a>
+              <a href="#journey">A journey</a>
+              <a href="#conclusion" class="nav__list-white">Conclusion</a>
+            </nav>
           </div>
         </div>
         <div class="conclusion__main">
@@ -379,12 +402,13 @@
             <a href="#" class="conclusion__links-item">Linkedin</a>
             <a href="#" class="conclusion__links-item">Mail</a>
           </div>
-          <div class="conclusion__background"></div>
+          <div class="conclusion__background">
+            <img src="./img/background.png" alt="" />
+          </div>
         </div>
       </section>
     </main>
   </body>
   <script src="js/scroll.js"></script>
-
-  <!-- <script src="js/slide.js"></script> -->
+  <script src="js/slide.js"></script>
 </html>
